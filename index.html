@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio | Daniel Juravle</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="particles"></div>
+        <div class="info-text">
+            <div class="text-content">
+                <h1>Daniel Juravle</h1>
+                <h3>Computer Science Graduate</h3>
+                <p>Full-stack Developer | Passionate about creating innovative and user-friendly solutions.</p>
+            </div>
+            <a href="#about" class="scroll"><i class='bx bxs-down-arrow'></i></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="header">
+            <h1>About Me</h1>
+            <a href="#" class="hire-me-button" onclick="hireMe(event)">Hire Me</a>
+        </div>
+
+        <div class="card">
+            <div class="info">
+                <img src='asset/275500350_1548136448905372_3296816632533706185_n.jpg' alt="Daniel Juravle">
+                <h1>Hi, I'm Daniel</h1>
+                <p>
+                    I'm currently pursuing a Bachelor of Science in Computer Science at the University of Greenwich. 
+                    I have experience in full-stack development and various technologies, including React, Django, and machine learning tools.
+                    I also worked as a Relief Supervisor, handling customer service and staff training, and have volunteered in quality assurance testing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="header">
+            <h1>Projects & Features</h1>
+        </div>
+
+        <div class="feature-cards">
+            <!-- Third Card -->
+            <div class="card">
+                <div class="info">
+                    <i class='bx bxs-home-alt-2'></i>
+                    <h1>House Price Prediction</h1>
+                    <p>
+                        Built a house price prediction model using decision trees and sci-kit libraries, with graphical representation using Matplotlib.
+                    </p>
+                    <a class="github-link" href="https://github.com/florindany68/HOUSEPRICEPREDICTION" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- First Card -->
+            <div class="card">
+                <div class="info">
+                    <i class='bx bxs-devices'></i>
+                    <h1>Java Chat Application</h1>
+                    <p>
+                        Developed a CLI messaging app using Java's networking features, supporting both group and private messaging.
+                    </p>
+                    <a class="github-link" href="https://github.com/florindany68/chat-application-using-java" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fourth Card -->
+            <div class="card">
+                <div class="info">
+                    <i class='bx bxs-book-content'></i>
+                    <h1>Django CRM application</h1>
+                    <p>
+                        Developed a Full Stack web application using Django, Python and MySQL. This project taught me how to manage databases in a project.
+                    </p>
+                    <a class="github-link" href="https://github.com/florindany68/DJANGO-CRM-APP" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="info">
+                    <i class='bx bx-code-alt'></i>
+                    <h1>Simplex Optimization</h1>
+                    <p>
+                        Implemented the Simplex Optimization algorithm using the LP SOLVE library with the R programming language.
+                    </p>
+                    <a class="github-link" href="https://github.com/your-github-username/simplex-optimization" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class='bx bxs-up-arrow'></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Your particles.js initialization code here
+        particlesJS("particles", {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.8,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detectsOn: "canvas",
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    onClick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+            });
+        }
+
+        window.addEventListener('scroll', function () {
+            var scrollTopButton = document.querySelector('.scroll-top');
+            if (this.window.pageYOffset > 200) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
